@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GroupBuyCRM
 {
+    ///Define customers info entity
     public class CustomersInfo
     {
         [Key]
