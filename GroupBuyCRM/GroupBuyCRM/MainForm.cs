@@ -294,12 +294,12 @@ namespace GroupBuyCRM
                 }
 
                 var dataset = context.ProductsInfo
-    .Where(x => x.ProductBrand.Contains(txtProductBrandS.Text) && x.ProductName.Contains(txtProductNameS.Text) 
-    && x.Origin.Contains(txtProductAddressS.Text) && x.Color.Contains(txtProductColorS.Text)
-    && x.Size.Contains(txtProductSizeS.Text) && x.Remarks.Contains(txtRemarksS.Text)
-    && (x.ProductsCategory.CategoryID == catID || catID == 0)
-    )
-    .Select(x => new { x.ProductsCategory.CategoryName, x.ProductBrand, x.ProductName, x.Origin, x.Color, x.Size, x.Remarks }).ToList();
+                            .Where(x => x.ProductBrand.Contains(txtProductBrandS.Text) && x.ProductName.Contains(txtProductNameS.Text) 
+                            && x.Origin.Contains(txtProductAddressS.Text) && x.Color.Contains(txtProductColorS.Text)
+                            && x.Size.Contains(txtProductSizeS.Text) && x.Remarks.Contains(txtRemarksS.Text)
+                            && (x.ProductsCategory.CategoryID == catID || catID == 0)
+                            )
+                            .Select(x => new { x.ProductsCategory.CategoryName, x.ProductBrand, x.ProductName, x.Origin, x.Color, x.Size, x.Remarks }).ToList();
 
                 //var posts = context.ProductsInfo
                 //       .Where(p => p.Tags == "<sql-server>")
